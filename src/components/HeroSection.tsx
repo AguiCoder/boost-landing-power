@@ -1,5 +1,6 @@
 import { ArrowRight, Play, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroDashboard from "@/assets/hero-dashboard.jpg";
 
 export const HeroSection = () => {
@@ -36,10 +37,12 @@ export const HeroSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cta" size="xl" className="group">
-                Start Free Trial
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/signup">
+                <Button variant="cta" size="xl" className="group">
+                  Start Free Trial
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               <Button variant="cta-secondary" size="xl" className="group">
                 <Play className="h-5 w-5" />
                 Watch Demo
